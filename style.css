@@ -8,30 +8,59 @@ body {
 header {
     background-color: #f2f2f2;
     padding: 20px;
-    display: flex;
-    align-items: center;
 }
 
-.logo {
-    flex: 1; /* Takes remaining space */
+.main-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center-align the navigation bar */
+}
+
+.main-nav ul li {
+    font-weight: bold; /* Make navigation items bold */
+    margin: 0 25px; /* Add spacing between navigation items */
+}
+
+.main-nav ul li a {
+    color: black;
+    text-decoration: none;
+    display: block; /* Ensure full clickable area */
+    padding: 10px; /* Add padding for better clickability */
+}
+
+.main-nav ul li a:hover {
+    color: black; /* Change text color on hover */
+    background-color: #ee77e8; /* Change background color on hover */
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 .logo img {
     max-width: 100px; /* Adjust size as needed */
-}
-
-.left-nav {
-    margin-right: auto; /* Pushes the nav to the left */
-}
-
-.left-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.left-nav ul li {
-    display: inline;
-    margin-left: 20px;
 }
 
 main {
@@ -56,4 +85,40 @@ footer {
     color: #fff;
     padding: 20px;
     text-align: center;
+}
+.item-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent items from wrapping */
+}
+
+.item-card {
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: top;
+    width: 200px; /* Set a fixed width for the cards */
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+main {
+    padding: 20px;
+    text-align: center;
+}
+.banner {
+    overflow: hidden; /* Hide overflow content */
+    width: 100%; /* Adjust width as needed */
+    height:80%; /* Adjust height as needed */
+    margin-top: 20px; /* Adjust margin as needed */
+    display: flex;
+    justify-content: center; /* Center-align the banner horizontally */
+}
+
+.banner-container {
+    white-space: nowrap; /* Prevent items from wrapping */
+    animation: scrollBanner 10s linear infinite; /* Adjust animation duration as needed */
+}
+
+.banner-container img {
+    max-width: 100%; /* Ensure images are responsive */
+    display: inline-block;
+    vertical-align: top;
 }
